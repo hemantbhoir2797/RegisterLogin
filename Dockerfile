@@ -1,6 +1,5 @@
-FROM node:18
+FROM openjdk:latest
 WORKDIR /app
-COPY package.json /app
-RUN javac Demo.java
 COPY . .
+RUN javac Demo.java
 CMD ["java", "Demo"]
