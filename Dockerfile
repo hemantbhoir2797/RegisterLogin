@@ -1,6 +1,6 @@
-FROM node:18
+FROM openjdk:latest
 WORKDIR /app
 COPY package.json /app
-RUN npm install
-COPY . /app
-CMD node index.js
+RUN javac Demo.java
+COPY . .
+CMD ["java", "Demo"]
